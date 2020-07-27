@@ -1,0 +1,48 @@
+
+/* apply styles to <header> */
+header {
+    padding: 20px 35px;
+    background-color: #39a6b2; 
+  }
+
+body {
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+
+  }
+
+    /* ??????? - Couldn't get this to work ask Support*/
+
+  header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline;
+  }
+ 
+  /* applying style to header a elements*/
+
+
+  header a {
+    text-decoration: none;
+    color: #fce138;
+  }
+
+
+  /* moving nav element to the right side of the page*/
+
+  header nav {
+    float: right;
+    margin: 7px 0;
+  }
+
+  header nav ul li {
+    display: inline;
+  }
+
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+  }
