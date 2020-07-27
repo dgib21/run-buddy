@@ -1,4 +1,12 @@
 
+
+/* teling every element on the page to not have any margin or border unless we explicityly tell it to*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 /* apply styles to <header> */
 header {
     padding: 20px 35px;
@@ -11,38 +19,65 @@ body {
 
   }
 
-    /* ??????? - Couldn't get this to work ask Support*/
-
+    /* ??????? - Couldn't get this to work ask Support - The yellow text color didn't apply to Run Buddy Text*/
   header h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    /* Moving NAV on the right side up by setting display to inline*/
     display: inline;
   }
  
   /* applying style to header a elements*/
-
-
   header a {
+
+      /* Text Decoration - You can underline text,strike through, or overline styles*/  
     text-decoration: none;
     color: #fce138;
   }
 
 
   /* moving nav element to the right side of the page*/
-
   header nav {
     float: right;
     margin: 7px 0;
   }
 
+    /* makin the li block element stay in line.  Forcing a different behaviour from the usual*/
   header nav ul li {
     display: inline;
   }
 
+    /* applying more style to header a elements*/
   header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+  }
+
+  footer {
+    background: #fce138;
+    width: 100%;
+    padding: 40px 35px;
+  }
+
+
+  footer h2 {
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+  }
+
+    /* line height assigns how much vertical space shoud be between lines of text content*/
+        /* text - align lets us align our text - by default is left aligned*/
+  footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer a {
+    color: #024e76;
   }
