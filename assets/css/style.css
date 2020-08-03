@@ -12,6 +12,11 @@
 header {
     padding: 20px 35px;
     background-color: #39a6b2; 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
   }
 
 body {
@@ -27,7 +32,10 @@ body {
     color: #fce138;
     margin: 0;
     /* Moving NAV on the right side up by setting display to inline*/
-    display: inline;
+    /*display: inline;*/
+
+    
+
   }
 
  
@@ -42,7 +50,7 @@ body {
 
   /* moving nav element to the right side of the page*/
   header nav {
-    float: right;
+
     margin: 7px 0;
   }
 
