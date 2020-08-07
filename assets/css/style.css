@@ -20,7 +20,7 @@ header {
   }
 
 body {
-    color: #39a6b2;
+    color: yellow;
     font-family: Helvetica, Arial, sans-serif;
 
   }
@@ -74,7 +74,7 @@ body {
     }
 
   footer {
-    background: #fce138;
+    background: #024e76;
     width: 100%;
     padding: 40px 35px;
     display: flex;
@@ -84,7 +84,7 @@ body {
   }
 
   footer h2 {
-    color: #024e76;
+    color: yellow;
     font-size: 30px;
     margin: 0;
   }
@@ -97,7 +97,7 @@ body {
   }
 
   footer a {
-    color: #024e76;
+    color: yellow;
   }
 
   section {
@@ -114,6 +114,9 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    border: 1px solid pink; 
+    flex-direction: row;
+    
   }
   /* Hero Style End */
 
@@ -163,12 +166,19 @@ body {
   }
 
   .hero-cta {
-    width: 35%;
+    width: fit-content;
     text-align: right;
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
     line-height: 1.2;
+    border: 1px solid red; 
+
+  }
+
+  .hero-cta p {
+
+    line-height: 2; 
   }
 
   .hero-cta h2 {
@@ -253,13 +263,14 @@ d
     flex: 1 30%;
   }
 
-  .step info {
+  .step-info {
     color: #024e76;
     font-size: 46px;
     flex: 2 70%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
   }
   
   .step-text p {
@@ -410,37 +421,73 @@ d
   .flex-row {
     display: flex;
   }
-  .service-grid-container {
-    max-width: 940px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 10px;
-  }
+  /* SERVICE STYLES BEGIN */
+.services {
+  background: #fce138; 
+}
 
-  .service-grid-item {
-    background-color: orange;
-    border: solid;
-    padding: 1em;
-    color: black;
-  }
+.service-grid-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
-  .box1 {
-      grid-column: 1/ span 1; 
-      grid-row: 1/ span 2; 
-    }
-  
+.service-grid-container {
+  background: lightyellow;
+  width: 80%;
+  display: grid;
+  /* repeat(iterator, size) */
+  grid-template-columns: 1fr repeat(2, 4fr);
+  grid-template-rows: repeat(5, 1fr) 2fr;
+  border: 2px solid #024e76;
+  color:  #024e76;
+  font-size: 1.2rem;
+}
 
-    .box2 {
-      grid-column: 3/4; 
-      grid-row: 1/-1; 
-    }
+.service-grid-item {
+  padding: 15px 0;
+  border: 2px solid #024e76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .box3 {
-      grid-column: 2/ span 2; 
-      grid-row: 3/ span 1; 
-    }
+/* specific match */
+.service-grid-item.basic {
+  grid-column: 2 / span 1;
+}
+.service-grid-item.both {
+  grid-column: 2 / span 2;
+}
+.service-grid-item.cancel {
+  grid-row: 1 / -1;
+}
+.service-grid-item.cancel {
+  writing-mode: vertical-lr;
+  grid-column: 1;
+  grid-row: 1 / -1;
+  transform: rotate(180deg);
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.servicePlan {
+
+display: flex; 
+width: fit-content; 
+margin: 0 auto; 
+font-size: 48px;
+color: #024e76;
+margin-bottom: 35px;
+padding: 0 100px 20px 100px;
+border-bottom: 3px solid lightblue;
+padding-bottom: 20px;
+
+}
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
   @media screen and (max-width: 980px) {
@@ -494,33 +541,25 @@ d
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
 
-    section {
-      padding: 30px 15px;
-    }
-  
-    .step h3 {
-      flex: 1 100%;
-      text-align: center;
-    }
-  
-    .step-info {
-      flex: 2 100%;
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .step-img {
-      flex: 0 32%;
-      margin-right: 0;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  
-    .step-text {
-      flex: 100%;  
-    }
-  
+  .service-grid-container {
+    grid-template-columns: 1fr 1fr;
   }
+
+  .service-grid-item.basic {
+    grid-column: 1;
+  }
+
+  .service-grid-item.both {
+    grid-column: 1 / -1;
+  }
+
+  .service-grid-item.cancel {
+    transform: none;
+    writing-mode: unset;
+    grid-column: 1 / -1;
+    grid-row: -1;
+  }
+}
 
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
