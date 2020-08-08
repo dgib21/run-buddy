@@ -7,10 +7,14 @@
     /* Instructs the browser to ignore padding in the overall width*/
     box-sizing: border-box;
   }
-
+  :root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+  }
 /* apply styles to <header> */
 header {
-    padding: 20px 35px;
+    padding: 28px 22px;
     background-color: #39a6b2; 
     display: flex; 
     justify-content: space-between;
@@ -360,9 +364,7 @@ d
     flex: 1;
   }
 
-  .trainer img {
-    width: 100%;
-  }
+
   
   .trainer-bio {
     padding: 25px;
@@ -379,6 +381,7 @@ d
 
   .trainer-bio h3 {
     font-size: 28px;
+    margin-bottom: 5px; 
 
   }
   
@@ -612,6 +615,52 @@ transform: rotate(-58deg);
 .radio-wrapper input:checked + label::after {
   content: "";
 }
+.trainer-1 {
+  background-image: url("/assets/images/trainer-1.jpg");
+  background-size: cover;
+  position: relative;
+ 
+}
+
+.trainer-2 {
+  background-image: url("/assets/images/trainer-2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.trainer-3 {
+  background-image: url("/assets/images/trainer-3.jpg");
+  background-size: cover;
+  position: relative; 
+}
+
+.trainer-img {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;  
+  position: relative; 
+
+}
+
+.trainer-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(252, 225, 56, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
+
+
+
+
+
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
   @media screen and (max-width: 980px) {
